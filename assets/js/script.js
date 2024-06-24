@@ -30,8 +30,70 @@ showTextBtn.forEach((button)=>{
 })
 
 
+document.addEventListener('DOMContentLoaded', function () {
+
+  const swiper2 = new Swiper('#swiper-2', {
+    slidesPerView: 1.5,
+    spaceBetween: 80,
+    centeredSlides: true,
+    loop: true,
+    breakpoints: {
+                // when window width is >= 320px (mobile)
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                // when window width is >= 640px (tablet)
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
+  const swiper1 = new Swiper('#swiper-1', {
+    speed: 400,
+    autoplay: {
+      delay: 5000,
+    },
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 
 
 
 
-
+});

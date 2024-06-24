@@ -1,6 +1,6 @@
 <div class="slider-section">
     <div class="slider-content">
-    <div class="swiper">
+    <div class="swiper" id="swiper-1">
     <div class="swiper-wrapper">
     <?php if(have_rows('slider')): ?>
     <?php while(have_rows('slider')): the_row();
